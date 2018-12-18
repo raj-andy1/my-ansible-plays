@@ -1,0 +1,16 @@
+#my version of hello_world
+---
+- name: Hello World
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+
+  - name: print the hostname
+  command: hostname
+  
+  - name: install tcpdump
+  yum:
+    name: tcpdump
+    state: present
