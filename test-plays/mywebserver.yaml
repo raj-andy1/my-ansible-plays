@@ -1,0 +1,11 @@
+#ansible playbook to setup webserver
+
+---
+- name: install httpd
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+    - name: install httpd
+      yum: name=httpd state=latest
